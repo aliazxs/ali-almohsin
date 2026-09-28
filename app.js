@@ -3,15 +3,16 @@ const copy = {
     dir: "ltr",
     langLabel: "عربي",
     nav: [
-      ["home", "Index"],
-      ["work", "Work"],
-      ["projects", "Projects"],
+      ["home", "Home"],
+      ["work", "Experience"],
+      ["projects", "Work"],
       ["contact", "Contact"],
     ],
     homeKicker: "Mobile application developer · Eastern Region",
     homeTitle: "Ali Almohsin",
+    homeOffer: "Bilingual apps for the workplace, the family, and the public store.",
     homeLede:
-      "Software development for mobile, mainly, and for the web. Frontend in Flutter and ASP.NET. Architecture is BLoC for Flutter, and MVC.",
+      "Mobile first, and for the web when the product needs it. Flutter and ASP.NET on the front. BLoC and MVC underneath.",
     facts: [
       ["Now", "Mobile Application Developer at Al-Bilad Arabia · contract · Al Khobar, on-site"],
       ["Since", "May 2021 · Innosoft SA before that, from September 2018"],
@@ -24,10 +25,16 @@ const copy = {
       ["02", "Family", "A private circle for grocery lists, tasks, and routines. Built in the Eastern Region."],
       ["03", "Public", "Tameni for the food and drug authority, and the Saudi Professional League app, on iPhone and Android."],
     ],
-    workTitle: "Practice",
-    workNote: "Public record",
-    skillsTitle: "Skills",
+    workTitle: "Experience",
+    workNote: "Since 2018",
+    workLede: "Five years on site with Al-Bilad Arabia in Al Khobar, after Innosoft. This is the public record.",
+    skillsTitle: "Capabilities",
     skillsNote: "Named on LinkedIn",
+    skillGroups: [
+      ["Build", ["Flutter", "Dart", "BLoC", "ASP.NET", "AngularJS", "MVC", "Git", "Firebase", "REST", "MySQL", "C++"]],
+      ["Enterprise", ["SAP ABAP", "Object-oriented ABAP", "SAP HANA", "SAPUI5", "OData", "Mobile Enterprise", "Data Dictionary"]],
+      ["Practice", ["Teamwork", "Problem solving", "English", "Mobile Application Development"]],
+    ],
     skills: [
       "Flutter",
       "Dart",
@@ -99,11 +106,14 @@ const copy = {
         body: "Jubail University College, as listed on the LinkedIn profile.",
       },
     ],
-    projectsTitle: "Projects",
-    projectsNote: "Open a plate",
+    projectsTitle: "Selected work",
+    projectsNote: "11 products",
+    projectsLede: "Enterprise systems, a family product, and apps that ship on the public stores.",
+    badgeLive: "On the stores",
+    badgeCase: "Case notes",
     back: "All projects",
-    contactTitle: "A short note is enough.",
-    contactLede: "I read mail and LinkedIn. The portfolio is the long version.",
+    contactTitle: "Tell me what you are building.",
+    contactLede: "A role, a contract, or a product. Mail and LinkedIn both reach me.",
     foot: "Eastern Region",
     blocks: {
       does: "What it does",
@@ -116,14 +126,15 @@ const copy = {
     langLabel: "EN",
     nav: [
       ["home", "البداية"],
-      ["work", "العمل"],
-      ["projects", "المشاريع"],
+      ["work", "الخبرة"],
+      ["projects", "الأعمال"],
       ["contact", "تواصل"],
     ],
     homeKicker: "مطوّر تطبيقات جوّال · المنطقة الشرقية",
     homeTitle: "علي المحسن",
+    homeOffer: "تطبيقات بالعربية والإنجليزية للعمل، وللبيت، وللمتجر.",
     homeLede:
-      "تطوير برمجيات للجوّال أولًا، وللويب حين يلزم. الواجهة بـ Flutter وASP.NET. المعمارية BLoC لـ Flutter، وMVC.",
+      "للجوّال أولًا، وللويب حين يلزم المنتج. الواجهة Flutter وASP.NET. المعمارية BLoC وMVC.",
     facts: [
       ["الآن", "مطوّر تطبيقات جوّال في البلاد العربية · عقد · الخبر، في الموقع"],
       ["منذ", "مايو 2021 · وقبلها Innosoft من سبتمبر 2018"],
@@ -136,10 +147,16 @@ const copy = {
       ["٠٢", "العائلة", "دائرة خاصة للبقالة والمهام والروتين. صُنع في المنطقة الشرقية."],
       ["٠٣", "عام", "طمني لهيئة الغذاء والدواء، وتطبيق الدوري السعودي للمحترفين، على iPhone وAndroid."],
     ],
-    workTitle: "الممارسة",
-    workNote: "السجل العام",
-    skillsTitle: "المهارات",
+    workTitle: "الخبرة",
+    workNote: "منذ 2018",
+    workLede: "خمس سنوات في الموقع مع البلاد العربية في الخبر، وقبلها Innosoft. هذا هو السجل العام.",
+    skillsTitle: "القدرات",
     skillsNote: "مذكورة في LinkedIn",
+    skillGroups: [
+      ["البناء", ["Flutter", "Dart", "BLoC", "ASP.NET", "AngularJS", "MVC", "Git", "Firebase", "REST", "MySQL", "C++"]],
+      ["المنشآت", ["SAP ABAP", "ABAP كائني", "SAP HANA", "SAPUI5", "OData", "Mobile Enterprise", "قاموس البيانات"]],
+      ["الممارسة", ["العمل ضمن فريق", "حل المشكلات", "الإنجليزية", "تطوير تطبيقات الجوّال"]],
+    ],
     skills: [
       "Flutter",
       "Dart",
@@ -211,11 +228,14 @@ const copy = {
         body: "كلية الجبيل الجامعية، كما هي في ملف LinkedIn.",
       },
     ],
-    projectsTitle: "المشاريع",
-    projectsNote: "افتح لوحة",
+    projectsTitle: "أعمال مختارة",
+    projectsNote: "١١ منتجًا",
+    projectsLede: "أنظمة للمنشآت، ومنتج للعائلة، وتطبيقات تُنشر في المتاجر.",
+    badgeLive: "في المتاجر",
+    badgeCase: "ملف",
     back: "كل المشاريع",
-    contactTitle: "رسالة قصيرة تكفي.",
-    contactLede: "أقرأ البريد وLinkedIn. هذه الصفحة هي النسخة الطويلة.",
+    contactTitle: "أخبرني ماذا تبني.",
+    contactLede: "وظيفة، أو عقد، أو منتج. البريد وLinkedIn يصلان إليّ.",
     foot: "المنطقة الشرقية",
     blocks: {
       does: "ماذا يفعل",
@@ -266,7 +286,7 @@ const projects = [
     en: {
       name: "Wuddi",
       line: "Family requests, grocery lists, and routines in a private circle.",
-      plate: "وُدِّي",
+      plate: "Eastern Region",
       summary:
         "Wuddi is my own product, made in the Eastern Region. A household shares a circle: grocery items with photos grouped by place, tasks, and routines that repeat on their own. Sign-in is username, email, or the biometrics already on the phone.",
       does: [
@@ -674,27 +694,24 @@ function home() {
   const c = t();
   return `
     <section class="hero">
-      <svg class="hero-schematic" viewBox="0 0 220 200" aria-hidden="true">
-        <g fill="none" stroke-linecap="square">
-          <path class="trace copper" d="M20 24 H150 V70" />
-          <path class="trace cyan" d="M168 16 V48 H210" />
-        </g>
-        <g class="npn" transform="translate(36 48)">
-          <circle cx="70" cy="70" r="58" />
-          <path d="M8 70 H40 M40 24 V116 M40 42 L118 10 M40 98 L108 138" />
-          <path class="arrow" d="M92 122 L108 138 L88 128 Z" />
-        </g>
-      </svg>
-      <div>
+      <div class="hero-copy">
         <p class="kicker">${esc(c.homeKicker)}</p>
         <h1>${esc(c.homeTitle)}</h1>
+        <p class="offer">${esc(c.homeOffer)}</p>
         <p class="lede">${esc(c.homeLede)}</p>
         <div class="actions">
           <a class="btn" href="#/projects">${esc(c.ctaProjects)}</a>
           <a class="btn ghost" href="#/contact">${esc(c.ctaContact)}</a>
         </div>
       </div>
-      <aside class="hero-side">
+      <aside class="spec">
+        <svg class="hero-schematic" viewBox="0 0 220 160" aria-hidden="true">
+          <g class="npn" transform="translate(70 8) scale(0.85)">
+            <circle cx="70" cy="70" r="58" />
+            <path d="M8 70 H40 M40 24 V116 M40 42 L118 10 M40 98 L108 138" />
+            <path class="arrow" d="M92 122 L108 138 L88 128 Z" />
+          </g>
+        </svg>
         ${c.facts
           .map(
             ([k, v], i) =>
@@ -703,10 +720,11 @@ function home() {
           .join("")}
       </aside>
     </section>
-    <section class="strip">
+    <section class="lanes">
       ${c.strips
         .map(
-          ([n, h, p]) => `<article><div class="when">${esc(n)}</div><h2>${esc(h)}</h2><p>${esc(p)}</p></article>`
+          ([n, h, p]) =>
+            `<a href="#/projects"><span class="when">${esc(n)}</span><h2>${esc(h)}</h2><p>${esc(p)}</p></a>`
         )
         .join("")}
     </section>`;
@@ -715,7 +733,7 @@ function home() {
 function work() {
   const c = t();
   return `
-    <div class="section-head"><h2>${esc(c.workTitle)}</h2><span class="when">${esc(c.workNote)}</span></div>
+    <div class="section-head"><div><h2>${esc(c.workTitle)}</h2><p class="section-lede">${esc(c.workLede)}</p></div><span class="when">${esc(c.workNote)}</span></div>
     <div class="timeline">
       ${c.roles
         .map(
@@ -725,20 +743,29 @@ function work() {
         )
         .join("")}
     </div>
-    <div class="section-head"><h2>${esc(c.skillsTitle)}</h2><span class="when">${esc(c.skillsNote)}</span></div>
-    <div class="meta skills">${c.skills.map((s) => `<span class="chip">${esc(s)}</span>`).join("")}</div>`;
+    <div class="section-head"><div><h2>${esc(c.skillsTitle)}</h2></div><span class="when">${esc(c.skillsNote)}</span></div>
+    <div class="groups">
+      ${c.skillGroups
+        .map(
+          ([name, items]) =>
+            `<section><h3>${esc(name)}</h3><div class="meta">${items.map((s) => `<span class="chip">${esc(s)}</span>`).join("")}</div></section>`
+        )
+        .join("")}
+    </div>`;
 }
 
 function projectList() {
   const c = t();
   return `
-    <div class="section-head"><h2>${esc(c.projectsTitle)}</h2><span class="when">${esc(c.projectsNote)}</span></div>
+    <div class="section-head"><div><h2>${esc(c.projectsTitle)}</h2><p class="section-lede">${esc(c.projectsLede)}</p></div><span class="when">${esc(c.projectsNote)}</span></div>
     <div class="plist">
       ${projects
         .map((p, i) => {
           const d = p[lang];
           const n = String(i + 1).padStart(2, "0");
-          return `<a class="card" href="#/projects/${p.id}"><span class="idx">${n}</span><span><h3>${esc(d.name)}</h3><p>${esc(d.line)}</p></span><span class="arrow">→</span></a>`;
+          const live = d.links.some(([, href]) => /apps\.apple\.com\/.+\/app\/|play\.google\.com\/store\/apps\/details/.test(href));
+          const badge = live ? c.badgeLive : c.badgeCase;
+          return `<a class="card" href="#/projects/${p.id}"><span class="idx">${n}</span><span><h3>${esc(d.name)}</h3><p>${esc(d.line)}</p></span><span class="card-end"><span class="badge${live ? "" : " quiet"}">${esc(badge)}</span><span class="plate-note">${esc(d.plate)}</span><span class="arrow">→</span></span></a>`;
         })
         .join("")}
     </div>`;
