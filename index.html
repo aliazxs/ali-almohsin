@@ -39,16 +39,9 @@
   <a class="skip" href="#stage">Skip to content</a>
   <header class="bar">
     <a class="mark" href="#/" data-nav="home">
-      <span class="pkg" aria-hidden="true">
-        <i class="f front"></i>
-        <i class="f back"></i>
-        <i class="f top"></i>
-        <i class="f bot"></i>
-        <i class="f left"></i>
-        <i class="f right"></i>
-        <i class="lead l1"></i>
-        <i class="lead l2"></i>
-        <i class="lead l3"></i>
+      <span class="to92" aria-hidden="true">
+        <span class="epoxy"><span class="flat"></span></span>
+        <span class="legs"><i></i><i></i><i></i></span>
       </span>
       <span class="mark-en">Ali Almohsin</span>
       <span class="mark-ar">علي المحسن</span>
@@ -58,26 +51,79 @@
   </header>
   <div class="rig" id="rig" data-cam="home">
     <div class="board">
-      <svg class="pcb" viewBox="0 0 1000 640" preserveAspectRatio="none" aria-hidden="true">
-        <path class="cu" d="M40 70 H210 V150 H430"/>
-        <path class="cu" d="M860 90 H700 V40"/>
-        <path class="sig" d="M160 520 H470 V430 H760 V560"/>
-        <path class="sig" d="M80 300 H200 V420"/>
-        <path class="cu dim" d="M520 120 H900"/>
-        <path class="sig dim" d="M300 560 H620"/>
+      <svg class="pcb" viewBox="0 0 1200 760" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <pattern id="gnd" width="7" height="7" patternUnits="userSpaceOnUse">
+            <path d="M0 7 L7 0" stroke="#083d28" stroke-width="0.7"/>
+          </pattern>
+        </defs>
+        <rect x="28" y="28" width="1144" height="704" fill="url(#gnd)" opacity="0.65"/>
+        <path class="rail" d="M50 46 H1150"/>
+        <path class="rail" d="M50 714 H1150"/>
+        <path class="tr" d="M250 70 H430 V130 H620 V90 H940"/>
+        <path class="tr" d="M250 110 H390 V190 H560 V250 H700 V330 H900"/>
+        <path class="tr" d="M250 160 H330 V240 H480 V310 H640"/>
+        <path class="tr" d="M250 210 H300 V360 H520 V430 H760 V500"/>
+        <path class="hot" d="M80 300 H180 V420 H300"/>
+        <path class="hot" d="M430 500 H620 V430 H800 V500"/>
+        <path class="sig flow" d="M690 500 V390 H520 V280 H360"/>
+        <path class="sig flow" d="M940 180 H800 V250 H680 V390"/>
+        <path class="tr" d="M100 640 H280 V560 H460 V640 H680"/>
+        <path class="tr" d="M1080 320 V460 H960 V520"/>
+        <g class="pads" fill="#e6c27a" stroke="#8d6230" stroke-width="0.5">
+          <circle cx="36" cy="56" r="3.2"/><circle cx="36" cy="72" r="3.2"/><circle cx="36" cy="88" r="3.2"/><circle cx="36" cy="104" r="3.2"/><circle cx="36" cy="120" r="3.2"/><circle cx="36" cy="136" r="3.2"/><circle cx="36" cy="152" r="3.2"/><circle cx="36" cy="168" r="3.2"/><circle cx="36" cy="184" r="3.2"/><circle cx="36" cy="200" r="3.2"/><circle cx="36" cy="216" r="3.2"/>
+          <circle cx="252" cy="56" r="3.2"/><circle cx="252" cy="72" r="3.2"/><circle cx="252" cy="88" r="3.2"/><circle cx="252" cy="104" r="3.2"/><circle cx="252" cy="120" r="3.2"/><circle cx="252" cy="136" r="3.2"/><circle cx="252" cy="152" r="3.2"/><circle cx="252" cy="168" r="3.2"/><circle cx="252" cy="184" r="3.2"/><circle cx="252" cy="200" r="3.2"/><circle cx="252" cy="216" r="3.2"/>
+          <circle cx="720" cy="508" r="3.2"/><circle cx="748" cy="508" r="3.2"/><circle cx="776" cy="508" r="3.2"/><circle cx="804" cy="508" r="3.2"/><circle cx="832" cy="508" r="3.2"/><circle cx="860" cy="508" r="3.2"/><circle cx="888" cy="508" r="3.2"/><circle cx="916" cy="508" r="3.2"/><circle cx="944" cy="508" r="3.2"/><circle cx="972" cy="508" r="3.2"/><circle cx="1000" cy="508" r="3.2"/><circle cx="1028" cy="508" r="3.2"/>
+          <circle cx="948" cy="80" r="3"/><circle cx="948" cy="100" r="3"/><circle cx="948" cy="120" r="3"/><circle cx="948" cy="140" r="3"/><circle cx="948" cy="160" r="3"/><circle cx="948" cy="180" r="3"/><circle cx="948" cy="200" r="3"/><circle cx="948" cy="220" r="3"/><circle cx="948" cy="240" r="3"/><circle cx="948" cy="260" r="3"/>
+        </g>
+        <g class="via" fill="#0a0c0b" stroke="#d7b56a" stroke-width="1.3">
+          <circle cx="250" cy="70" r="3.1"/><circle cx="430" cy="70" r="3.1"/><circle cx="430" cy="130" r="3.1"/><circle cx="620" cy="130" r="3.1"/><circle cx="620" cy="90" r="3.1"/><circle cx="940" cy="90" r="3.1"/>
+          <circle cx="390" cy="110" r="2.6"/><circle cx="390" cy="190" r="2.6"/><circle cx="560" cy="190" r="2.6"/><circle cx="560" cy="250" r="2.6"/><circle cx="700" cy="250" r="2.6"/><circle cx="700" cy="330" r="2.6"/><circle cx="900" cy="330" r="2.6"/>
+          <circle cx="300" cy="210" r="2.6"/><circle cx="300" cy="360" r="2.6"/><circle cx="520" cy="360" r="2.6"/><circle cx="520" cy="430" r="2.6"/><circle cx="760" cy="430" r="2.6"/><circle cx="760" cy="500" r="2.6"/>
+          <circle cx="180" cy="300" r="2.4"/><circle cx="180" cy="420" r="2.4"/><circle cx="360" cy="280" r="2.4"/><circle cx="680" cy="390" r="2.4"/><circle cx="800" cy="180" r="2.4"/><circle cx="960" cy="460" r="2.4"/>
+          <circle cx="120" cy="80" r="2.2"/><circle cx="1080" cy="80" r="2.2"/><circle cx="120" cy="680" r="2.2"/><circle cx="1080" cy="680" r="2.2"/><circle cx="600" cy="600" r="2.2"/><circle cx="440" cy="520" r="2.2"/>
+        </g>
+        <g class="hole" fill="none" stroke="#cbb98a" stroke-width="3">
+          <circle cx="36" cy="36" r="11"/><circle cx="1164" cy="36" r="11"/><circle cx="36" cy="724" r="11"/><circle cx="1164" cy="724" r="11"/>
+        </g>
+        <g class="hole" fill="#06140f">
+          <circle cx="36" cy="36" r="6"/><circle cx="1164" cy="36" r="6"/><circle cx="36" cy="724" r="6"/><circle cx="1164" cy="724" r="6"/>
+        </g>
+        <g class="silk" fill="#efe6c8" font-family="IBM Plex Mono, monospace" font-size="13">
+          <text x="70" y="700">AA-MB-01</text>
+          <text x="210" y="700">REV C</text>
+          <text x="58" y="250">U1</text>
+          <text x="710" y="700">U2</text>
+          <text x="1004" y="48">J1</text>
+          <text x="300" y="150">Y1</text>
+          <text x="500" y="360">L1</text>
+        </g>
       </svg>
-      <a class="ic ic-exp" href="#/work"><span data-ic="exp">Experience</span></a>
-      <a class="ic ic-work" href="#/projects"><span data-ic="work">Work</span></a>
+      <a class="ic ic-exp qfp" href="#/work"><i class="pin l"></i><i class="pin r"></i><i class="pin t"></i><i class="pin b"></i><span data-ic="exp">Experience</span></a>
+      <a class="ic ic-work qfp" href="#/projects"><i class="pin l"></i><i class="pin r"></i><i class="pin t"></i><i class="pin b"></i><span data-ic="work">Work</span></a>
       <a class="ic ic-io" href="#/contact"><span data-ic="io">Contact</span></a>
-      <span class="cap" style="left:30%;top:12%"></span>
-      <span class="cap" style="left:48%;top:18%"></span>
-      <span class="cap" style="left:74%;top:46%"></span>
-      <span class="cap" style="left:18%;top:78%"></span>
-      <span class="cap tall" style="left:90%;top:70%"></span>
-      <span class="res" style="left:26%;top:38%"></span>
-      <span class="res" style="left:42%;top:44%"></span>
-      <span class="res" style="left:63%;top:22%"></span>
-      <span class="res" style="left:12%;top:58%"></span>
+      <span class="part cap" style="left:23%;top:8%"></span>
+      <span class="part cap" style="left:27%;top:14%"></span>
+      <span class="part cap" style="left:23%;top:30%"></span>
+      <span class="part cap" style="left:62%;top:60%"></span>
+      <span class="part cap" style="left:74%;top:58%"></span>
+      <span class="part cap" style="left:86%;top:62%"></span>
+      <span class="part cap" style="left:74%;top:12%"></span>
+      <span class="part cap" style="left:74%;top:24%"></span>
+      <span class="part cap" style="left:46%;top:46%"></span>
+      <span class="part ely" style="left:14%;top:46%"></span>
+      <span class="part ely" style="left:40%;top:64%"></span>
+      <span class="part ely" style="left:68%;top:16%"></span>
+      <span class="part res" style="left:28%;top:40%"></span>
+      <span class="part res" style="left:44%;top:22%"></span>
+      <span class="part res" style="left:56%;top:36%"></span>
+      <span class="part res" style="left:18%;top:70%"></span>
+      <span class="part res" style="left:90%;top:46%"></span>
+      <span class="part xtal" style="left:30%;top:16%"></span>
+      <span class="part coil" style="left:48%;top:34%"></span>
+      <span class="part smd" style="left:36%;top:48%"></span>
+      <span class="part smd" style="left:64%;top:28%"></span>
+      <span class="part smd" style="left:22%;top:78%"></span>
     </div>
     <main class="display" id="stage" tabindex="-1"></main>
   </div>
