@@ -171,7 +171,7 @@ const projects = [
       ],
       stack: ["Flutter", "Riverpod", "GoRouter", "Supabase", "On-device biometrics"],
       found: "Searched both stores. No Wuddi listing. Similarly named apps are other products. Privacy and support are live.",
-      links: [["Privacy & support", "https://aliazxs.github.io/"]],
+      links: [["ودي · Wuddi", "https://aliazxs.github.io/"]],
     },
     ar: {
       name: "وُدِّي",
@@ -187,7 +187,7 @@ const projects = [
       ],
       stack: ["Flutter", "Riverpod", "GoRouter", "Supabase", "بصمة الجهاز"],
       found: "بُحث في المتجرين. لا إدراج باسم وُدِّي. التطبيقات قريبة الاسم منتجات أخرى. الخصوصية والدعم منشوران.",
-      links: [["الخصوصية والدعم", "https://aliazxs.github.io/"]],
+      links: [["ودي · Wuddi", "https://aliazxs.github.io/"]],
     },
   },
   {
