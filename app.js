@@ -8,20 +8,20 @@ const copy = {
       ["projects", "Projects"],
       ["contact", "Contact"],
     ],
-    homeKicker: "Mobile application developer · Al-Ahsa",
+    homeKicker: "Mobile application developer · Eastern Region",
     homeTitle: "Ali Almohsin",
     homeLede:
       "Software development for mobile, mainly, and for the web. Frontend in Flutter and ASP.NET. Architecture is BLoC for Flutter, and MVC.",
     facts: [
       ["Now", "Mobile Application Developer at Al-Bilad Arabia · contract · Al Khobar, on-site"],
       ["Since", "May 2021 · Innosoft SA before that, from September 2018"],
-      ["Based", "Al-Ahsa, Saudi Arabia"],
+      ["Based", "Eastern Region, Saudi Arabia"],
     ],
     ctaProjects: "See the work",
     ctaContact: "Write to me",
     strips: [
       ["01", "Enterprise", "Workplace requests, housing, and field work for Aramco — one app, two jobs."],
-      ["02", "Family", "A private circle for grocery lists, tasks, and routines. Built in Al-Ahsa."],
+      ["02", "Family", "A private circle for grocery lists, tasks, and routines. Built in the Eastern Region."],
       ["03", "Public", "Tameni for the food and drug authority, and the Saudi Professional League app, on iPhone and Android."],
     ],
     workTitle: "Practice",
@@ -104,7 +104,7 @@ const copy = {
     back: "All projects",
     contactTitle: "A short note is enough.",
     contactLede: "I read mail and LinkedIn. The portfolio is the long version.",
-    foot: "Al-Ahsa",
+    foot: "Eastern Region",
     blocks: {
       does: "What it does",
       stack: "How it is built",
@@ -120,20 +120,20 @@ const copy = {
       ["projects", "المشاريع"],
       ["contact", "تواصل"],
     ],
-    homeKicker: "مطوّر تطبيقات جوّال · الأحساء",
+    homeKicker: "مطوّر تطبيقات جوّال · المنطقة الشرقية",
     homeTitle: "علي المحسن",
     homeLede:
       "تطوير برمجيات للجوّال أولًا، وللويب حين يلزم. الواجهة بـ Flutter وASP.NET. المعمارية BLoC لـ Flutter، وMVC.",
     facts: [
       ["الآن", "مطوّر تطبيقات جوّال في البلاد العربية · عقد · الخبر، في الموقع"],
       ["منذ", "مايو 2021 · وقبلها Innosoft من سبتمبر 2018"],
-      ["المكان", "الأحساء، السعودية"],
+      ["المكان", "المنطقة الشرقية، السعودية"],
     ],
     ctaProjects: "شاهد العمل",
     ctaContact: "راسلني",
     strips: [
       ["٠١", "المنشآت", "طلبات ومساكن وعمل ميداني لأرامكو — تطبيق واحد لوظيفتين."],
-      ["٠٢", "العائلة", "دائرة خاصة للبقالة والمهام والروتين. صُنع في الأحساء."],
+      ["٠٢", "العائلة", "دائرة خاصة للبقالة والمهام والروتين. صُنع في المنطقة الشرقية."],
       ["٠٣", "عام", "طمني لهيئة الغذاء والدواء، وتطبيق الدوري السعودي للمحترفين، على iPhone وAndroid."],
     ],
     workTitle: "الممارسة",
@@ -216,7 +216,7 @@ const copy = {
     back: "كل المشاريع",
     contactTitle: "رسالة قصيرة تكفي.",
     contactLede: "أقرأ البريد وLinkedIn. هذه الصفحة هي النسخة الطويلة.",
-    foot: "الأحساء",
+    foot: "المنطقة الشرقية",
     blocks: {
       does: "ماذا يفعل",
       stack: "كيف بُني",
@@ -268,7 +268,7 @@ const projects = [
       line: "Family requests, grocery lists, and routines in a private circle.",
       plate: "وُدِّي",
       summary:
-        "Wuddi is my own product, made in Al-Ahsa. A household shares a circle: grocery items with photos grouped by place, tasks, and routines that repeat on their own. Sign-in is username, email, or the biometrics already on the phone.",
+        "Wuddi is my own product, made in the Eastern Region. A household shares a circle: grocery items with photos grouped by place, tasks, and routines that repeat on their own. Sign-in is username, email, or the biometrics already on the phone.",
       does: [
         "Private circles for family and friends — members see names, photos, and that circle’s requests, not phone numbers.",
         "Grocery lists with photos, organised by place.",
@@ -282,9 +282,9 @@ const projects = [
     ar: {
       name: "وُدِّي",
       line: "طلبات العائلة والبقالة والروتين في دائرة خاصة.",
-      plate: "من الأحساء",
+      plate: "المنطقة الشرقية",
       summary:
-        "وُدِّي منتجي، من الأحساء. أهل البيت يشاركون دائرة: بقالة بالصور حسب المكان، ومهام، وروتينات تتكرر وحدها. الدخول باسم المستخدم أو البريد أو ببصمة الجهاز.",
+        "وُدِّي منتجي، من المنطقة الشرقية. أهل البيت يشاركون دائرة: بقالة بالصور حسب المكان، ومهام، وروتينات تتكرر وحدها. الدخول باسم المستخدم أو البريد أو ببصمة الجهاز.",
       does: [
         "دوائر خاصة للعائلة والأصدقاء — الأعضاء يرون الاسم والصورة وطلبات الدائرة، لا رقم الجوال.",
         "قوائم بقالة بالصور، مرتبة حسب المكان.",

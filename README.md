@@ -1,6 +1,6 @@
 # Ali Almohsin
 
-Portfolio for Ali Almohsin (علي المحسن), mobile application developer in Al-Ahsa.
+Portfolio for Ali Almohsin (علي المحسن), mobile application developer in the Eastern Region.
 
 Live site: https://aliazxs.github.io/ali-almohsin/
 
