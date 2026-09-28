@@ -192,7 +192,7 @@ html[dir="rtl"] .section-head h2 { font-family: var(--arabic); font-weight: 600;
 .timeline { display: grid; gap: 0; }
 .role {
   display: grid;
-  grid-template-columns: 9rem 1fr;
+  grid-template-columns: 12.5rem 1fr;
   gap: 1.5rem;
   padding: 1.4rem 0;
   border-top: 1px solid var(--line);
@@ -200,7 +200,10 @@ html[dir="rtl"] .section-head h2 { font-family: var(--arabic); font-weight: 600;
   color: inherit;
 }
 .role strong { font-size: 1.25rem; font-weight: 560; }
-.role p { margin: 0.35rem 0 0; color: var(--ink-soft); max-width: 42rem; line-height: 1.55; }
+.role p { margin: 0.35rem 0 0; color: var(--ink-soft); max-width: 46rem; line-height: 1.55; }
+.role ul { margin: 0.6rem 0 0; padding-inline-start: 1.1rem; max-width: 46rem; }
+.role li { margin: 0.35rem 0; color: var(--ink-soft); line-height: 1.5; }
+.meta.skills { margin: 0 0 2rem; }
 .when { color: var(--copper-deep); font-size: 0.85rem; }
 
 .plist { display: grid; }
