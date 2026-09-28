@@ -1,13 +1,13 @@
 :root {
-  --bg: #05070b;
-  --panel: rgba(10, 16, 22, 0.78);
-  --ink: #e8f4f6;
-  --muted: #93a6ae;
-  --cyan: #5ce1ff;
-  --cyan-dim: rgba(92, 225, 255, 0.22);
-  --copper: #e7a15a;
-  --copper-dim: rgba(231, 161, 90, 0.28);
-  --line: rgba(92, 225, 255, 0.18);
+  --bg: #070b0e;
+  --panel: rgba(12, 18, 20, 0.34);
+  --ink: #f3efe6;
+  --muted: #c9c3b8;
+  --cyan: #8fd0c6;
+  --cyan-dim: rgba(143, 208, 198, 0.32);
+  --copper: #e0b07a;
+  --copper-dim: rgba(224, 176, 122, 0.34);
+  --line: rgba(243, 239, 230, 0.14);
   --sans: "Space Grotesk", "IBM Plex Sans Arabic", sans-serif;
   --arabic: "IBM Plex Sans Arabic", "Space Grotesk", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -83,8 +83,8 @@ html[dir="rtl"] body { font-family: var(--arabic); letter-spacing: 0; }
   margin: 0.85rem auto 0;
   padding: 0.65rem 0.9rem;
   border: 1px solid var(--line);
-  background: rgba(8, 12, 16, 0.88);
-  backdrop-filter: blur(14px);
+  background: rgba(8, 12, 14, 0.55);
+  backdrop-filter: blur(16px);
   position: sticky;
   top: 0.65rem;
   z-index: 4;
@@ -244,12 +244,11 @@ html[dir="rtl"] .offer { font-family: var(--arabic); font-weight: 600; letter-sp
 .spec {
   display: grid;
   align-content: start;
-  gap: 0.65rem;
-  padding: 0.85rem;
-  border: 1px solid var(--line);
-  background:
-    linear-gradient(180deg, rgba(92, 225, 255, 0.06), transparent 28%),
-    rgba(8, 12, 16, 0.9);
+  gap: 0;
+  padding: 0.2rem 0 0;
+  border: 0;
+  border-top: 1px solid var(--copper-dim);
+  background: transparent;
 }
 .spec .hero-schematic {
   position: static;
@@ -258,9 +257,10 @@ html[dir="rtl"] .offer { font-family: var(--arabic); font-weight: 600; letter-sp
 }
 .fact {
   margin: 0;
-  padding: 0.85rem 0.9rem;
-  border: 1px solid var(--line);
-  background: rgba(5, 7, 11, 0.9);
+  padding: 0.8rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
 }
 .fact b {
   display: flex;
@@ -307,7 +307,7 @@ html[dir="rtl"] .fact b { font-family: var(--arabic); letter-spacing: 0; text-tr
   min-height: 100%;
   padding: 1.05rem 1rem 1.15rem;
   border: 1px solid var(--line);
-  background: rgba(8, 12, 16, 0.55);
+  background: transparent;
   color: inherit;
   text-decoration: none;
   transition: border-color 0.35s var(--ease), transform 0.35s var(--ease);
@@ -469,9 +469,7 @@ html[dir="rtl"] .detail h2 { font-family: var(--arabic); font-weight: 600; lette
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background:
-    linear-gradient(165deg, rgba(92, 225, 255, 0.08), transparent 42%),
-    #0a1016;
+  background: linear-gradient(165deg, rgba(143, 208, 198, 0.1), transparent 46%);
   border: 1px solid var(--cyan-dim);
   overflow: hidden;
 }
@@ -541,7 +539,7 @@ html[dir="rtl"] .prose h3 { font-family: var(--arabic); letter-spacing: 0; text-
   margin-top: 0.4rem;
   padding: 0.85rem 0.95rem;
   border-inline-start: 2px solid var(--copper);
-  background: rgba(231, 161, 90, 0.06);
+  background: transparent;
   color: var(--muted);
   line-height: 1.5;
 }
@@ -650,20 +648,20 @@ body:has(#rig) { height: 100vh; overflow: hidden; }
   margin-top: calc(min(860px, 108vh) / -2);
   transform-style: preserve-3d;
   background:
-    linear-gradient(rgba(92, 225, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(92, 225, 255, 0.05) 1px, transparent 1px),
-    #0c1412;
+    linear-gradient(rgba(143, 208, 198, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 208, 198, 0.09) 1px, transparent 1px),
+    #143028;
   background-size: 26px 26px, 26px 26px, auto;
-  border: 1px solid rgba(231, 161, 90, 0.4);
+  border: 1px solid rgba(224, 176, 122, 0.55);
   box-shadow: 0 28px 0 #070a09, 0 46px 70px rgba(0, 0, 0, 0.55);
   transform: rotateX(54deg) rotateZ(var(--yaw)) scale(var(--zoom)) translate3d(var(--tx), var(--ty), 0);
   transition: transform 1.15s var(--ease);
 }
-.rig[data-cam="home"] { --yaw: -14deg; --zoom: 0.84; --tx: 0px; --ty: 40px; --dx: 33%; --dy: 16%; --dw: 34%; --dh: 62%; }
-.rig[data-cam="work"] { --yaw: 12deg; --zoom: 1.55; --tx: 260px; --ty: 140px; --dx: 8%; --dy: 8%; --dw: 46%; --dh: 78%; }
-.rig[data-cam="projects"] { --yaw: -4deg; --zoom: 1.45; --tx: -120px; --ty: -180px; --dx: 30%; --dy: 18%; --dw: 44%; --dh: 70%; }
-.rig[data-cam="die"] { --yaw: 4deg; --zoom: 1.7; --tx: -140px; --ty: -210px; --dx: 28%; --dy: 12%; --dw: 46%; --dh: 74%; }
-.rig[data-cam="contact"] { --yaw: -18deg; --zoom: 1.5; --tx: -280px; --ty: 80px; --dx: 46%; --dy: 10%; --dw: 42%; --dh: 72%; }
+.rig[data-cam="home"] { --yaw: -14deg; --zoom: 0.76; --tx: 0px; --ty: 40px; --dx: 33%; --dy: 16%; --dw: 34%; --dh: 62%; --edge: rgba(224, 176, 122, 0.45); }
+.rig[data-cam="work"] { --yaw: 12deg; --zoom: 1.75; --tx: 260px; --ty: 140px; --dx: 8%; --dy: 8%; --dw: 46%; --dh: 78%; --edge: rgba(143, 208, 198, 0.7); }
+.rig[data-cam="projects"] { --yaw: -4deg; --zoom: 1.65; --tx: -120px; --ty: -180px; --dx: 30%; --dy: 18%; --dw: 44%; --dh: 70%; --edge: rgba(224, 176, 122, 0.75); }
+.rig[data-cam="die"] { --yaw: 4deg; --zoom: 1.9; --tx: -140px; --ty: -210px; --dx: 28%; --dy: 12%; --dw: 46%; --dh: 74%; --edge: rgba(224, 176, 122, 0.8); }
+.rig[data-cam="contact"] { --yaw: -18deg; --zoom: 1.7; --tx: -280px; --ty: 80px; --dx: 46%; --dy: 10%; --dw: 42%; --dh: 72%; --edge: rgba(214, 220, 214, 0.7); }
 html[dir="rtl"] .rig[data-cam="work"] { --tx: -260px; }
 html[dir="rtl"] .rig[data-cam="projects"] { --tx: 120px; }
 html[dir="rtl"] .rig[data-cam="die"] { --tx: 140px; }
@@ -671,8 +669,8 @@ html[dir="rtl"] .rig[data-cam="contact"] { --tx: 280px; }
 
 .pcb { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .cu, .sig { fill: none; stroke-linecap: square; }
-.cu { stroke: #e7a15a; stroke-width: 3; opacity: 0.8; }
-.sig { stroke: #5ce1ff; stroke-width: 2; opacity: 0.55; }
+.cu { stroke: #e0b07a; stroke-width: 3.5; opacity: 0.9; }
+.sig { stroke: #8fd0c6; stroke-width: 2.4; opacity: 0.75; }
 .dim { opacity: 0.28; }
 
 .ic {
@@ -700,9 +698,9 @@ html[dir="rtl"] .rig[data-cam="contact"] { --tx: 280px; }
   pointer-events: none;
 }
 html[dir="rtl"] .ic { letter-spacing: 0; text-transform: none; font-family: var(--arabic); font-size: 0.85rem; }
-.ic-exp { left: 3.5%; top: 5%; width: 17%; height: 26%; }
-.ic-work { left: 58%; top: 68%; width: 32%; height: 22%; justify-content: flex-end; }
-.ic-io { left: 80%; top: 7%; width: 15%; height: 32%; justify-content: flex-end; }
+.ic-exp { left: 3.5%; top: 5%; width: 17%; height: 26%; color: var(--cyan); border-top: 2px solid var(--cyan); }
+.ic-work { left: 58%; top: 68%; width: 32%; height: 22%; justify-content: flex-end; color: var(--copper); border-top: 2px solid var(--copper); }
+.ic-io { left: 80%; top: 7%; width: 15%; height: 32%; justify-content: flex-end; color: #e7ece8; border-top: 2px solid #e7ece8; }
 .ic:hover { color: var(--copper); }
 
 .cap {
@@ -739,10 +737,23 @@ html[dir="rtl"] .ic { letter-spacing: 0; text-transform: none; font-family: var(
   z-index: 3;
   container-type: inline-size;
   padding: 1.1rem 1.15rem 1.4rem;
-  background: rgba(5, 8, 11, 0.92);
-  border: 1px solid rgba(92, 225, 255, 0.32);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-  transition: left 1.15s var(--ease), top 1.15s var(--ease), width 1.15s var(--ease);
+  background: linear-gradient(180deg, rgba(8, 14, 16, 0.42), rgba(8, 14, 16, 0.18));
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+  border: 1px solid var(--edge, rgba(224, 176, 122, 0.45));
+  box-shadow: inset 0 1px 0 rgba(243, 239, 230, 0.08);
+  scrollbar-color: rgba(224, 176, 122, 0.45) transparent;
+  transition: left 1.15s var(--ease), top 1.15s var(--ease), width 1.15s var(--ease), background 1.15s var(--ease), border-color 1.15s var(--ease);
+}
+.rig[data-cam="work"] #stage.display {
+  background: linear-gradient(180deg, rgba(16, 40, 38, 0.4), rgba(8, 14, 16, 0.16));
+}
+.rig[data-cam="projects"] #stage.display,
+.rig[data-cam="die"] #stage.display {
+  background: linear-gradient(180deg, rgba(42, 28, 16, 0.4), rgba(8, 14, 16, 0.16));
+}
+.rig[data-cam="contact"] #stage.display {
+  background: linear-gradient(180deg, rgba(22, 28, 30, 0.4), rgba(8, 14, 16, 0.16));
 }
 @container (max-width: 900px) {
   .hero, .detail, .contact, .lanes, .role, .card { grid-template-columns: 1fr; }
