@@ -666,6 +666,13 @@ function applyLang() {
   $("#nav").innerHTML = c.nav
     .map(([id, label]) => `<a href="#/${id === "home" ? "" : id}" data-route="${id}">${label}</a>`)
     .join("");
+  const ics =
+    lang === "ar"
+      ? { exp: "الخبرة", work: "الأعمال", io: "تواصل" }
+      : { exp: "Experience", work: "Work", io: "Contact" };
+  document.querySelectorAll("[data-ic]").forEach((el) => {
+    el.textContent = ics[el.dataset.ic];
+  });
   localStorage.setItem("aa-lang", lang);
 }
 
@@ -827,8 +834,13 @@ function render() {
           : r.name === "contact"
             ? contact()
             : home();
+  const cam = r.name === "project" ? "die" : r.name;
+  const rig = $("#rig");
+  if (rig) rig.dataset.cam = cam;
   const paint = () => {
-    $("#stage").innerHTML = html;
+    const stage = $("#stage");
+    stage.innerHTML = html;
+    stage.scrollTop = 0;
     const current = r.name === "project" ? "projects" : r.name;
     document.querySelectorAll("#nav a").forEach((a) => {
       if (a.dataset.route === current) a.setAttribute("aria-current", "page");
@@ -837,9 +849,7 @@ function render() {
     document.title =
       lang === "ar" ? "علي المحسن — تطبيقات الجوّال" : "Ali Almohsin — Mobile applications";
   };
-  const motion = document.startViewTransition && !matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (booted && motion) document.startViewTransition(paint);
-  else paint();
+  paint();
   booted = true;
 }
 
