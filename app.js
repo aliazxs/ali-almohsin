@@ -674,6 +674,17 @@ function home() {
   const c = t();
   return `
     <section class="hero">
+      <svg class="hero-schematic" viewBox="0 0 220 200" aria-hidden="true">
+        <g fill="none" stroke-linecap="square">
+          <path class="trace copper" d="M20 24 H150 V70" />
+          <path class="trace cyan" d="M168 16 V48 H210" />
+        </g>
+        <g class="npn" transform="translate(36 48)">
+          <circle cx="70" cy="70" r="58" />
+          <path d="M8 70 H40 M40 24 V116 M40 42 L118 10 M40 98 L108 138" />
+          <path class="arrow" d="M92 122 L108 138 L88 128 Z" />
+        </g>
+      </svg>
       <div>
         <p class="kicker">${esc(c.homeKicker)}</p>
         <h1>${esc(c.homeTitle)}</h1>
@@ -684,7 +695,12 @@ function home() {
         </div>
       </div>
       <aside class="hero-side">
-        ${c.facts.map(([k, v]) => `<p class="fact"><b>${esc(k)}</b><span>${esc(v)}</span></p>`).join("")}
+        ${c.facts
+          .map(
+            ([k, v], i) =>
+              `<p class="fact"><b><span class="pad">${String(i + 1).padStart(2, "0")}</span>${esc(k)}</b><span>${esc(v)}</span></p>`
+          )
+          .join("")}
       </aside>
     </section>
     <section class="strip">
