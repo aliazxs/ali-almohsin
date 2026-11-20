@@ -1,132 +1,442 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ali Almohsin — Mobile applications</title>
-  <meta name="description" content="Ali Almohsin ships bilingual apps for the workplace, the family, and the public store. Flutter and ASP.NET. Eastern Region, Saudi Arabia." />
-  <link rel="canonical" href="https://aliazxs.github.io/ali-almohsin/" />
-  <meta property="og:title" content="Ali Almohsin — Mobile applications" />
-  <meta property="og:description" content="Bilingual apps for the workplace, the family, and the public store. Eastern Region." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://aliazxs.github.io/ali-almohsin/" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Ali Almohsin",
-    "alternateName": "علي المحسن",
-    "jobTitle": "Mobile Application Developer",
-    "worksFor": { "@type": "Organization", "name": "Al-Bilad Arabia" },
-    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Jubail University College" },
-    "address": { "@type": "PostalAddress", "addressRegion": "Eastern Region", "addressCountry": "SA" },
-    "email": "aliazxs@hotmail.com",
-    "url": "https://aliazxs.github.io/ali-almohsin/",
-    "sameAs": [
-      "https://www.linkedin.com/in/ali-almohsin/",
-      "https://github.com/aliazxs"
-    ]
-  }
-  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ali Almohsin · Mobile application developer</title>
+  <link rel="canonical" href="https://aliazxs.github.io/ali-almohsin/">
+  <meta name="description" content="Ali Almohsin builds Flutter and enterprise mobile software. Contract developer at Al-Bilad Arabia on Saudi Aramco programs, previously at Innosoft SA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Noto+Naskh+Arabic:wght@500;600&family=Outfit:wght@380;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1814;
+      --muted: #5c564c;
+      --line: #ddd6c8;
+      --paper: #f6f1e7;
+      --paper-2: #fffdf8;
+      --pine: #1e4a3a;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Outfit, "Avenir Next", "Segoe UI", sans-serif;
+      font-weight: 380;
+      line-height: 1.55;
+    }
+    html[lang="ar"] body { font-family: "IBM Plex Sans Arabic", Outfit, sans-serif; }
+    a { color: var(--pine); }
+    a:hover { color: var(--ink); }
+    header, main, footer { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 24px;
+      padding: 28px 0 18px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    html[lang="ar"] .top,
+    html[lang="ar"] .kicker,
+    html[lang="ar"] .meta,
+    html[lang="ar"] .facts .label {
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .top nav { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+    .top a, .lang button { color: var(--ink); text-decoration: none; }
+    .top a:hover, .lang button:hover { color: var(--pine); }
+    .lang { display: flex; gap: 8px; }
+    .lang button {
+      background: none;
+      border: 0;
+      padding: 0;
+      font: inherit;
+      letter-spacing: inherit;
+      text-transform: inherit;
+      cursor: pointer;
+      color: var(--muted);
+    }
+    .lang button[aria-pressed="true"] { color: var(--ink); }
+    .hero { padding: 56px 0 28px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 168px 1fr;
+      gap: 36px;
+      align-items: end;
+    }
+    .portrait {
+      width: 168px;
+      height: 168px;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+    }
+    .kicker {
+      margin: 0 0 14px;
+      color: var(--pine);
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-family: Newsreader, Palatino, "Iowan Old Style", serif;
+      font-weight: 500;
+      font-size: clamp(48px, 7vw, 84px);
+      letter-spacing: -0.03em;
+      line-height: 0.92;
+    }
+    html[lang="ar"] h1,
+    html[lang="ar"] .lede,
+    html[lang="ar"] h2,
+    html[lang="ar"] article.job h3 {
+      font-family: "Noto Naskh Arabic", "IBM Plex Sans Arabic", serif;
+      letter-spacing: 0;
+    }
+    .lede {
+      max-width: 640px;
+      margin: 22px 0 0;
+      font-family: Newsreader, Palatino, serif;
+      font-size: clamp(22px, 2.4vw, 28px);
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 40px 0 8px;
+      padding: 0;
+      list-style: none;
+    }
+    .facts li { border-top: 1px solid var(--ink); padding-top: 12px; }
+    .facts .label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    section { padding: 56px 0 8px; }
+    h2 {
+      margin: 0 0 8px;
+      font-family: Newsreader, Palatino, serif;
+      font-weight: 500;
+      font-size: 40px;
+      letter-spacing: -0.02em;
+    }
+    .section-note { max-width: 66ch; color: var(--muted); margin: 0 0 28px; }
+    .work { display: grid; gap: 14px; }
+    article.job, .proof {
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      padding: 26px 26px 22px;
+    }
+    .proof {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .proof img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+    .proof figcaption { margin: 0; }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 16px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    article.job h3 {
+      margin: 12px 0 8px;
+      font-family: Newsreader, Palatino, serif;
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    article.job p, .proof p { margin: 0; max-width: 68ch; }
+    .links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 14px; font-size: 14px; }
+    .timeline { list-style: none; margin: 0; padding: 0; }
+    .timeline li {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 24px;
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+    }
+    .when { color: var(--muted); font-size: 14px; }
+    .timeline h3 { margin: 0 0 4px; font-size: 20px; font-weight: 600; }
+    .timeline p { margin: 8px 0 0; max-width: 68ch; }
+    .quiet { color: var(--muted); }
+    .certs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .certs div { border-top: 1px solid var(--ink); padding-top: 12px; }
+    .certs strong { display: block; font-weight: 600; }
+    .close {
+      margin-top: 8px;
+      padding: 8px 0 20px;
+      max-width: 40ch;
+      font-family: Newsreader, Palatino, serif;
+      font-size: clamp(26px, 3vw, 36px);
+      line-height: 1.25;
+      font-weight: 500;
+    }
+    html[lang="ar"] .close { font-family: "Noto Naskh Arabic", serif; max-width: 28ch; }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 28px 0 64px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 720px) {
+      .facts, .certs, .timeline li, .hero-grid, .proof { grid-template-columns: 1fr; }
+      .top, footer { flex-direction: column; align-items: flex-start; }
+      .hero { padding-top: 32px; }
+      h1 { font-size: 44px; }
+      .lede { font-size: 22px; }
+      .portrait { width: 96px; height: 96px; }
+      .hero-grid { grid-template-columns: 96px 1fr; gap: 16px; align-items: center; }
+      .proof img { max-width: 200px; }
+    }
+  </style>
 </head>
 <body>
-  <div class="field" aria-hidden="true"></div>
-  <a class="skip" href="#stage">Skip to content</a>
-  <header class="bar">
-    <a class="mark" href="#/" data-nav="home">
-      <span class="to92" aria-hidden="true">
-        <span class="epoxy"><span class="flat"></span></span>
-        <span class="legs"><i></i><i></i><i></i></span>
+  <header class="top">
+    <div class="en">Ali Almohsin</div>
+    <div class="ar" hidden>علي المحسن</div>
+    <nav>
+      <a href="#work"><span class="en">Work</span><span class="ar" hidden>الأعمال</span></a>
+      <a href="#experience"><span class="en">Experience</span><span class="ar" hidden>الخبرة</span></a>
+      <a href="#education"><span class="en">Education</span><span class="ar" hidden>التعليم</span></a>
+      <a href="https://www.linkedin.com/in/ali-almohsin/">LinkedIn</a>
+      <span class="lang">
+        <button type="button" id="lang-en" aria-pressed="true">EN</button>
+        <button type="button" id="lang-ar" aria-pressed="false">عربي</button>
       </span>
-      <span class="mark-en">Ali Almohsin</span>
-      <span class="mark-ar">علي المحسن</span>
-    </a>
-    <nav class="nav" id="nav" aria-label="Primary"></nav>
-    <button class="lang" id="lang" type="button" aria-label="Switch language">عربي</button>
+    </nav>
   </header>
-  <div class="rig" id="rig" data-cam="home">
-    <div class="board">
-      <svg class="pcb" viewBox="0 0 1200 760" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <pattern id="gnd" width="7" height="7" patternUnits="userSpaceOnUse">
-            <path d="M0 7 L7 0" stroke="#083d28" stroke-width="0.7"/>
-          </pattern>
-        </defs>
-        <rect x="28" y="28" width="1144" height="704" fill="url(#gnd)" opacity="0.65"/>
-        <path class="rail" d="M50 46 H1150"/>
-        <path class="rail" d="M50 714 H1150"/>
-        <path class="tr" d="M250 70 H430 V130 H620 V90 H940"/>
-        <path class="tr" d="M250 110 H390 V190 H560 V250 H700 V330 H900"/>
-        <path class="tr" d="M250 160 H330 V240 H480 V310 H640"/>
-        <path class="tr" d="M250 210 H300 V360 H520 V430 H760 V500"/>
-        <path class="hot" d="M80 300 H180 V420 H300"/>
-        <path class="hot" d="M430 500 H620 V430 H800 V500"/>
-        <path class="sig flow" d="M690 500 V390 H520 V280 H360"/>
-        <path class="sig flow" d="M940 180 H800 V250 H680 V390"/>
-        <path class="tr" d="M100 640 H280 V560 H460 V640 H680"/>
-        <path class="tr" d="M1080 320 V460 H960 V520"/>
-        <g class="pads" fill="#e6c27a" stroke="#8d6230" stroke-width="0.5">
-          <circle cx="36" cy="56" r="3.2"/><circle cx="36" cy="72" r="3.2"/><circle cx="36" cy="88" r="3.2"/><circle cx="36" cy="104" r="3.2"/><circle cx="36" cy="120" r="3.2"/><circle cx="36" cy="136" r="3.2"/><circle cx="36" cy="152" r="3.2"/><circle cx="36" cy="168" r="3.2"/><circle cx="36" cy="184" r="3.2"/><circle cx="36" cy="200" r="3.2"/><circle cx="36" cy="216" r="3.2"/>
-          <circle cx="252" cy="56" r="3.2"/><circle cx="252" cy="72" r="3.2"/><circle cx="252" cy="88" r="3.2"/><circle cx="252" cy="104" r="3.2"/><circle cx="252" cy="120" r="3.2"/><circle cx="252" cy="136" r="3.2"/><circle cx="252" cy="152" r="3.2"/><circle cx="252" cy="168" r="3.2"/><circle cx="252" cy="184" r="3.2"/><circle cx="252" cy="200" r="3.2"/><circle cx="252" cy="216" r="3.2"/>
-          <circle cx="720" cy="508" r="3.2"/><circle cx="748" cy="508" r="3.2"/><circle cx="776" cy="508" r="3.2"/><circle cx="804" cy="508" r="3.2"/><circle cx="832" cy="508" r="3.2"/><circle cx="860" cy="508" r="3.2"/><circle cx="888" cy="508" r="3.2"/><circle cx="916" cy="508" r="3.2"/><circle cx="944" cy="508" r="3.2"/><circle cx="972" cy="508" r="3.2"/><circle cx="1000" cy="508" r="3.2"/><circle cx="1028" cy="508" r="3.2"/>
-          <circle cx="948" cy="80" r="3"/><circle cx="948" cy="100" r="3"/><circle cx="948" cy="120" r="3"/><circle cx="948" cy="140" r="3"/><circle cx="948" cy="160" r="3"/><circle cx="948" cy="180" r="3"/><circle cx="948" cy="200" r="3"/><circle cx="948" cy="220" r="3"/><circle cx="948" cy="240" r="3"/><circle cx="948" cy="260" r="3"/>
-        </g>
-        <g class="via" fill="#0a0c0b" stroke="#d7b56a" stroke-width="1.3">
-          <circle cx="250" cy="70" r="3.1"/><circle cx="430" cy="70" r="3.1"/><circle cx="430" cy="130" r="3.1"/><circle cx="620" cy="130" r="3.1"/><circle cx="620" cy="90" r="3.1"/><circle cx="940" cy="90" r="3.1"/>
-          <circle cx="390" cy="110" r="2.6"/><circle cx="390" cy="190" r="2.6"/><circle cx="560" cy="190" r="2.6"/><circle cx="560" cy="250" r="2.6"/><circle cx="700" cy="250" r="2.6"/><circle cx="700" cy="330" r="2.6"/><circle cx="900" cy="330" r="2.6"/>
-          <circle cx="300" cy="210" r="2.6"/><circle cx="300" cy="360" r="2.6"/><circle cx="520" cy="360" r="2.6"/><circle cx="520" cy="430" r="2.6"/><circle cx="760" cy="430" r="2.6"/><circle cx="760" cy="500" r="2.6"/>
-          <circle cx="180" cy="300" r="2.4"/><circle cx="180" cy="420" r="2.4"/><circle cx="360" cy="280" r="2.4"/><circle cx="680" cy="390" r="2.4"/><circle cx="800" cy="180" r="2.4"/><circle cx="960" cy="460" r="2.4"/>
-          <circle cx="120" cy="80" r="2.2"/><circle cx="1080" cy="80" r="2.2"/><circle cx="120" cy="680" r="2.2"/><circle cx="1080" cy="680" r="2.2"/><circle cx="600" cy="600" r="2.2"/><circle cx="440" cy="520" r="2.2"/>
-        </g>
-        <g class="hole" fill="none" stroke="#cbb98a" stroke-width="3">
-          <circle cx="36" cy="36" r="11"/><circle cx="1164" cy="36" r="11"/><circle cx="36" cy="724" r="11"/><circle cx="1164" cy="724" r="11"/>
-        </g>
-        <g class="hole" fill="#06140f">
-          <circle cx="36" cy="36" r="6"/><circle cx="1164" cy="36" r="6"/><circle cx="36" cy="724" r="6"/><circle cx="1164" cy="724" r="6"/>
-        </g>
-        <g class="silk" fill="#efe6c8" font-family="IBM Plex Mono, monospace" font-size="13">
-          <text x="70" y="700">AA-MB-01</text>
-          <text x="210" y="700">REV C</text>
-          <text x="58" y="250">U1</text>
-          <text x="710" y="700">U2</text>
-          <text x="1004" y="48">J1</text>
-          <text x="300" y="150">Y1</text>
-          <text x="500" y="360">L1</text>
-        </g>
-      </svg>
-      <a class="ic ic-exp qfp" href="#/work"><i class="pin l"></i><i class="pin r"></i><i class="pin t"></i><i class="pin b"></i><span data-ic="exp">Experience</span></a>
-      <a class="ic ic-work qfp" href="#/projects"><i class="pin l"></i><i class="pin r"></i><i class="pin t"></i><i class="pin b"></i><span data-ic="work">Work</span></a>
-      <a class="ic ic-io" href="#/contact"><span data-ic="io">Contact</span></a>
-      <span class="part cap" style="left:23%;top:8%"></span>
-      <span class="part cap" style="left:27%;top:14%"></span>
-      <span class="part cap" style="left:23%;top:30%"></span>
-      <span class="part cap" style="left:62%;top:60%"></span>
-      <span class="part cap" style="left:74%;top:58%"></span>
-      <span class="part cap" style="left:86%;top:62%"></span>
-      <span class="part cap" style="left:74%;top:12%"></span>
-      <span class="part cap" style="left:74%;top:24%"></span>
-      <span class="part cap" style="left:46%;top:46%"></span>
-      <span class="part ely" style="left:14%;top:46%"></span>
-      <span class="part ely" style="left:40%;top:64%"></span>
-      <span class="part ely" style="left:68%;top:16%"></span>
-      <span class="part res" style="left:28%;top:40%"></span>
-      <span class="part res" style="left:44%;top:22%"></span>
-      <span class="part res" style="left:56%;top:36%"></span>
-      <span class="part res" style="left:18%;top:70%"></span>
-      <span class="part res" style="left:90%;top:46%"></span>
-      <span class="part xtal" style="left:30%;top:16%"></span>
-      <span class="part coil" style="left:48%;top:34%"></span>
-      <span class="part smd" style="left:36%;top:48%"></span>
-      <span class="part smd" style="left:64%;top:28%"></span>
-      <span class="part smd" style="left:22%;top:78%"></span>
-    </div>
-    <main class="display" id="stage" tabindex="-1"></main>
-  </div>
-  <script src="app.js"></script>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid">
+        <img class="portrait" src="media/portrait.jpg" width="568" height="568" alt="Ali Almohsin">
+        <div>
+          <p class="kicker en">Al Ahsa · enterprise mobile in Al Khobar</p>
+          <p class="kicker ar" hidden>الأحساء · تطبيقات المؤسسات في الخبر</p>
+          <h1 class="en">Ali Almohsin</h1>
+          <h1 class="ar" hidden>علي المحسن</h1>
+          <p class="lede en">I build mobile applications, mainly in Flutter, and the enterprise systems behind them. Since May 2021 that work has been for Saudi Aramco programs, on contract with Al-Bilad Arabia.</p>
+          <p class="lede ar" hidden>أبني تطبيقات الجوال، وأكثرها بفلاتر، والأنظمة الإدارية التي تقف خلفها. منذ مايو ٢٠٢١ وهذا العمل لبرامج أرامكو السعودية، بعقد مع البلاد العربية.</p>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><span class="label en">Now</span><span class="label ar" hidden>الآن</span><span class="en">Mobile Application Developer, Al-Bilad Arabia, contract</span><span class="ar" hidden>مطور تطبيقات جوال، البلاد العربية، عقد</span></li>
+        <li><span class="label en">Before</span><span class="label ar" hidden>قبلها</span><span class="en">Mobile App Developer, Innosoft SA, 2018–2021</span><span class="ar" hidden>مطور تطبيقات جوال، إنوسوفت، ٢٠١٨–٢٠٢١</span></li>
+        <li><span class="label en">Degree</span><span class="label ar" hidden>المؤهل</span><span class="en">Computer Science, Jubail University College, 2012–2017</span><span class="ar" hidden>علوم الحاسب، كلية الجبيل الجامعية، ٢٠١٢–٢٠١٧</span></li>
+      </ul>
+    </section>
+
+    <section id="work">
+      <h2 class="en">Selected work</h2>
+      <h2 class="ar" hidden>أعمال مختارة</h2>
+      <p class="section-note en">The employer on the Aramco programs is Al-Bilad Arabia. I am a contractor there. The Innosoft products are the work from that job, which ended in March 2021.</p>
+      <p class="section-note ar" hidden>جهة التوظيف في برامج أرامكو هي البلاد العربية، وأنا متعاقد معها. منتجات إنوسوفت هي عمل تلك الوظيفة، وانتهت في مارس ٢٠٢١.</p>
+
+      <figure class="proof">
+        <img src="media/tameni-store.jpg" width="600" height="1300" alt="Tameni home screen from the public App Store listing">
+        <figcaption>
+          <div class="meta"><span class="en">Public app · Tameni</span><span class="ar" hidden>تطبيق معلن · طمني</span><span class="en">Innosoft · 2018–2021</span><span class="ar" hidden>إنوسوفت · ٢٠١٨–٢٠٢١</span></div>
+          <h3 class="en" style="margin:12px 0 8px">Tameni, as listed today</h3>
+          <h3 class="ar" hidden style="margin:12px 0 8px">طمني كما هو معلن اليوم</h3>
+          <p class="en">This is the public App Store screen, not an internal build. At Innosoft I built the products page, reports, search, the menu, and modals, on the interface and the backend. The store listing has moved on since 2021. The Saudi Professional League app and the older SFDA app from that period are no longer listed, so there is no current public screen for them.</p>
+          <p class="ar" hidden>هذه شاشة متجر التطبيقات العامة، وليست نسخة داخلية. في إنوسوفت بنيت صفحة المنتجات والبلاغات والبحث والقائمة والنوافذ، في الواجهة وفي الخلفية. المتجر تجدد بعد ٢٠٢١. تطبيق الدوري السعودي وتطبيق الغذاء والدواء الأقدم من تلك الفترة لم يعودا في المتاجر، فلا توجد لهما شاشة عامة حالية.</p>
+          <div class="links">
+            <a href="https://apps.apple.com/us/app/tameni/id1483589368"><span class="en">App Store</span><span class="ar" hidden>آب ستور</span></a>
+            <a href="https://play.google.com/store/apps/details?id=sfda.tamini"><span class="en">Google Play</span><span class="ar" hidden>جوجل بلاي</span></a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <div class="work">
+        <article class="job">
+          <div class="meta"><span class="en">Saudi Aramco · Downstream Digital Center</span><span class="ar" hidden>أرامكو السعودية · مركز التحول الرقمي للتكرير</span><span>Nov 2024 – <span class="en">present</span><span class="ar" hidden>حتى الآن</span></span></div>
+          <h3>Global Optimizer</h3>
+          <p class="en">Moves S/4HANA IS-Oil downstream operational data from production into Cognite Data Fusion, through SAP PI/PO, for planning, supply, cost, and margin. Associated with Al-Bilad Arabia. The record includes SAP ABAP and object-oriented ABAP.</p>
+          <p class="ar" hidden>ينقل بيانات التشغيل من S/4HANA IS-Oil إلى Cognite Data Fusion عبر SAP PI/PO، للتخطيط والإمداد والتكلفة والهامش. مرتبط بالبلاد العربية. السجل يذكر SAP ABAP والبرمجة الكائنية.</p>
+        </article>
+        <article class="job">
+          <div class="meta"><span class="en">Saudi Aramco</span><span class="ar" hidden>أرامكو السعودية</span><span>Feb 2024 – Nov 2024</span></div>
+          <h3>ERP Transformation</h3>
+          <p class="en">A mobile application so employees can reach corporate systems from a phone or tablet. Listed as SAP ABAP developer, associated with Al-Bilad Arabia.</p>
+          <p class="ar" hidden>تطبيق جوال يصل منه الموظف إلى أنظمة الشركة من الهاتف أو الجهاز اللوحي. مسجل كمطور SAP ABAP، ومرتبط بالبلاد العربية.</p>
+        </article>
+        <article class="job">
+          <div class="meta"><span class="en">Saudi Aramco</span><span class="ar" hidden>أرامكو السعودية</span><span>Sep 2023 – Feb 2024</span></div>
+          <h3>mySecurity</h3>
+          <p class="en">ID and sticker, visitor management, and material gate pass, plus security observations, announcements, and guidelines. Associated with Al-Bilad Arabia.</p>
+          <p class="ar" hidden>الهوية والملصق، وإدارة الزوار، وتصريح المواد، مع الملاحظات الأمنية والتعاميم والإرشادات. مرتبط بالبلاد العربية.</p>
+        </article>
+        <article class="job">
+          <div class="meta"><span class="en">Saudi Aramco</span><span class="ar" hidden>أرامكو السعودية</span><span>Jan 2023 – Nov 2023</span></div>
+          <h3>Miscellaneous Payment System</h3>
+          <p class="en">Employee reimbursements and ad-hoc payments to vendors. Associated with Al-Bilad Arabia.</p>
+          <p class="ar" hidden>تعويضات الموظفين والمدفوعات العارضة للموردين. مرتبط بالبلاد العربية.</p>
+        </article>
+        <article class="job">
+          <div class="meta"><span class="en">Saudi Aramco</span><span class="ar" hidden>أرامكو السعودية</span><span>May 2021 – Dec 2022</span></div>
+          <h3>SafeLife</h3>
+          <p class="en">Report, manage, and track safety observations, near misses, and incidents for employees and contractors, and run safety inspections. Associated with Al-Bilad Arabia.</p>
+          <p class="ar" hidden>الإبلاغ عن ملاحظات السلامة والحوادث الوشيكة والحوادث وتتبعها، للموظفين والمتعاقدين، مع تنفيذ تفتيش السلامة. مرتبط بالبلاد العربية.</p>
+        </article>
+        <article class="job">
+          <div class="meta"><span class="en">Saudi Food and Drug Authority · Innosoft SA</span><span class="ar" hidden>هيئة الغذاء والدواء · إنوسوفت</span><span class="en">2018 – 2021</span><span class="ar" hidden>٢٠١٨ – ٢٠٢١</span></div>
+          <h3 class="en">SFDA</h3>
+          <h3 class="ar" hidden>تطبيق الغذاء والدواء</h3>
+          <p class="en">Header, main menu, home, Knowledge Center, magazine, SARA, translation, HTTP requests, and sorting and filtering. The store listing from that period is no longer up.</p>
+          <p class="ar" hidden>الترويسة والقائمة الرئيسية والصفحة الرئيسية ومركز المعرفة والمجلة وSARA والترجمة وطلبات HTTP والفرز والتصفية. نسخة المتجر من تلك الفترة لم تعد متاحة.</p>
+        </article>
+        <article class="job">
+          <div class="meta"><span class="en">Saudi Professional League · Innosoft SA</span><span class="ar" hidden>الدوري السعودي للمحترفين · إنوسوفت</span><span class="en">2018 – 2021</span><span class="ar" hidden>٢٠١٨ – ٢٠٢١</span></div>
+          <h3 class="en">Saudi Professional League</h3>
+          <h3 class="ar" hidden>الدوري السعودي للمحترفين</h3>
+          <p class="en">Flutter on iOS and Android. Header, menu, web views, translation, schedule, and statistics, plus some models and HTTP requests. That version is no longer the app on the stores.</p>
+          <p class="ar" hidden>فلاتر على iOS وAndroid. الترويسة والقائمة وعروض الويب والترجمة والجدول والإحصاءات، مع بعض النماذج وطلبات HTTP. تلك النسخة لم تعد التطبيق المعروض في المتاجر.</p>
+        </article>
+        <article class="job">
+          <div class="meta"><span class="en">Ministry of Human Resources and Social Development · Innosoft SA</span><span class="ar" hidden>وزارة الموارد البشرية والتنمية الاجتماعية · إنوسوفت</span><span>Dec 2018 – Jan 2020</span></div>
+          <h3 class="en">E-services rebuild</h3>
+          <h3 class="ar" hidden>إعادة بناء الخدمات الإلكترونية</h3>
+          <p class="en">Redevelopment of the ministry’s e-services in ASP.NET.</p>
+          <p class="ar" hidden>إعادة تطوير الخدمات الإلكترونية للوزارة بـ ASP.NET.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="en">Experience</h2>
+      <h2 class="ar" hidden>الخبرة</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when en">May 2021 – present<br>Al Khobar · On-site</div>
+          <div class="when ar" hidden>مايو ٢٠٢١ – حتى الآن<br>الخبر · في الموقع</div>
+          <div>
+            <h3 class="en">Mobile Application Developer</h3>
+            <h3 class="ar" hidden>مطور تطبيقات جوال</h3>
+            <p class="quiet en">Al-Bilad Arabia · Contract</p>
+            <p class="quiet ar" hidden>البلاد العربية · عقد</p>
+            <p class="en">Design, code, test, release, and support for the Aramco mobile programs above. The day-to-day record is modules and screens, charts, multi-screen navigation, calendars, and changes driven by how people use the apps. Flutter with Bloc. Web work with ASP.NET and MVC.</p>
+            <p class="ar" hidden>التصميم والبرمجة والاختبار والإطلاق والدعم لبرامج أرامكو أعلاه. العمل اليومي في السجل: الوحدات والشاشات والرسوم والتنقل بين الشاشات والتقويمات، والتعديل بحسب استخدام الناس. فلاتر مع Bloc. والويب بـ ASP.NET وMVC.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when en">Oct 2018 – Mar 2021<br>Al Khobar</div>
+          <div class="when ar" hidden>أكتوبر ٢٠١٨ – مارس ٢٠٢١<br>الخبر</div>
+          <div>
+            <h3 class="en">Mobile App Developer</h3>
+            <h3 class="ar" hidden>مطور تطبيقات جوال</h3>
+            <p class="quiet en">Innosoft SA · Full-time</p>
+            <p class="quiet ar" hidden>إنوسوفت · دوام كامل</p>
+            <p class="en">Web applications in ASP.NET and AngularJS, and Android and iOS apps in Flutter and Dart. MVC, Agile and Scrum, Git, Firebase, and HTTP. The shipped products were the Saudi Professional League, SFDA, and Tameni apps.</p>
+            <p class="ar" hidden>تطبيقات ويب بـ ASP.NET وAngularJS، وتطبيقات Android وiOS بفلاتر وDart. MVC وأجايل وسكرم وGit وFirebase وHTTP. المنتجات التي خرجت: الدوري السعودي، والغذاء والدواء، وطمني.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when en">Sep 2018 – Oct 2018</div>
+          <div class="when ar" hidden>سبتمبر ٢٠١٨ – أكتوبر ٢٠١٨</div>
+          <div>
+            <h3 class="en">Full-stack developer, trainee</h3>
+            <h3 class="ar" hidden>مطور متكامل، متدرب</h3>
+            <p class="quiet">Innosoft SA</p>
+            <p class="en">Flutter and Dart.</p>
+            <p class="ar" hidden>فلاتر وDart.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when en">Oct 2017 – Sep 2018<br>Saudi Arabia</div>
+          <div class="when ar" hidden>أكتوبر ٢٠١٧ – سبتمبر ٢٠١٨<br>السعودية</div>
+          <div>
+            <h3>IT</h3>
+            <p class="quiet">ETE (SAMA &amp; RAMZI)</p>
+            <p class="en">Electronic devices, from networks to cameras, plus installing applications and resolving network issues for two companies at the same time.</p>
+            <p class="ar" hidden>الأجهزة الإلكترونية، من الشبكات إلى الكاميرات، مع تثبيت التطبيقات وحل أعطال الشبكة لشركتين في الوقت نفسه.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="education">
+      <h2 class="en">Education and study</h2>
+      <h2 class="ar" hidden>التعليم والدراسة</h2>
+      <p class="section-note en">The degree is the credential. The two courses below are the ones still current.</p>
+      <p class="section-note ar" hidden>الشهادة هي المؤهل. الدورتان أدناه هما الساريتان.</p>
+      <ol class="timeline">
+        <li>
+          <div class="when">2012 – 2017</div>
+          <div>
+            <h3 class="en">Bachelor’s degree, Computer Science</h3>
+            <h3 class="ar" hidden>بكالوريوس علوم الحاسب</h3>
+            <p class="quiet en">Jubail University College</p>
+            <p class="quiet ar" hidden>كلية الجبيل الجامعية</p>
+          </div>
+        </li>
+      </ol>
+      <div class="certs">
+        <div>
+          <strong>SAP UI5 / Fiori</strong>
+          <span class="quiet en">Class Central · November 2024 · SAPUI5 and remote OData</span>
+          <span class="quiet ar" hidden>Class Central · نوفمبر ٢٠٢٤ · SAPUI5 وOData البعيد</span>
+        </div>
+        <div>
+          <strong class="en">Artificial intelligence for engineers</strong>
+          <strong class="ar" hidden>الذكاء الاصطناعي للمهندسين</strong>
+          <span class="quiet en">Phi Science · November 2020 · Credential 155/2020/420400</span>
+          <span class="quiet ar" hidden>فاي ساينس · نوفمبر ٢٠٢٠ · رقم ١٥٥/٢٠٢٠/٤٢٠٤٠٠</span>
+        </div>
+      </div>
+    </section>
+
+    <p class="close en">What I want next is enterprise mobile at this standard: Flutter in people’s hands, and the corporate systems behind it.</p>
+    <p class="close ar" hidden>الذي أريده في الخطوة التالية هو تطبيقات المؤسسات على الجوال بهذا المستوى: فلاتر بين أيدي الناس، والأنظمة الإدارية التي تقف خلفها.</p>
+  </main>
+
+  <footer>
+    <div class="en">Ali Almohsin · Al Ahsa</div>
+    <div class="ar" hidden>علي المحسن · الأحساء</div>
+    <a href="https://www.linkedin.com/in/ali-almohsin/">linkedin.com/in/ali-almohsin</a>
+  </footer>
+  <script>
+    function setLang(lang) {
+      var ar = lang === "ar";
+      document.documentElement.lang = ar ? "ar" : "en";
+      document.documentElement.dir = ar ? "rtl" : "ltr";
+      document.querySelectorAll(".en").forEach(function (el) { el.hidden = ar; });
+      document.querySelectorAll(".ar").forEach(function (el) { el.hidden = !ar; });
+      document.getElementById("lang-en").setAttribute("aria-pressed", ar ? "false" : "true");
+      document.getElementById("lang-ar").setAttribute("aria-pressed", ar ? "true" : "false");
+      document.title = ar ? "علي المحسن · مطور تطبيقات جوال" : "Ali Almohsin · Mobile application developer";
+      try { sessionStorage.setItem("lang", lang); } catch (e) {}
+    }
+    document.getElementById("lang-en").addEventListener("click", function () { setLang("en"); });
+    document.getElementById("lang-ar").addEventListener("click", function () { setLang("ar"); });
+    var q = "";
+    try { q = new URLSearchParams(location.search).get("lang") || ""; } catch (e) {}
+    if (q === "ar" || q === "en") setLang(q);
+    else { try { if (sessionStorage.getItem("lang") === "ar") setLang("ar"); } catch (e) {} }
+  </script>
 </body>
 </html>
