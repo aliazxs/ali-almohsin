@@ -250,6 +250,7 @@
     .quiet { color: var(--muted); margin: 0; }
     .timeline p { margin: 10px 0 0; max-width: 66ch; }
     .certs { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 8px; }
+    .certs.three { grid-template-columns: 1fr 1fr 1fr; }
     .certs div { border-top: 1px solid var(--ink); padding-top: 14px; }
     .certs strong { display: block; font-weight: 600; margin-bottom: 6px; }
     .next { background: var(--pine); color: var(--cream); margin-top: 80px; }
@@ -290,7 +291,7 @@
     @media (max-width: 800px) {
       .wrap { width: min(1120px, calc(100% - 32px)); }
       .hero { padding-top: 36px; }
-      .hero-grid, .facts, .timeline li, .certs, .case-shot, .index, .index.three { grid-template-columns: 1fr; }
+      .hero-grid, .facts, .timeline li, .certs, .certs.three, .case-shot, .index, .index.three { grid-template-columns: 1fr; }
       .hero-grid { gap: 24px; }
       .mat { width: max-content; }
       .portrait { width: 132px; height: 158px; }
@@ -317,6 +318,7 @@
       <nav>
         <a href="#work"><span class="en">Work</span><span class="ar" hidden>الأعمال</span></a>
         <a href="#experience"><span class="en">Experience</span><span class="ar" hidden>الخبرات</span></a>
+        <a href="#skills"><span class="en">Skills</span><span class="ar" hidden>المهارات</span></a>
         <a href="#education"><span class="en">Education</span><span class="ar" hidden>المؤهلات</span></a>
         <a href="https://www.linkedin.com/in/ali-almohsin/">LinkedIn</a>
         <span class="lang">
@@ -342,10 +344,10 @@
           <p class="lede ar" hidden>أبني تطبيقات الجوال بـ Flutter، وغالباً بوصفها الواجهة الأمامية لبرامج المؤسسات. أعمل منذ مايو ٢٠٢١ مطوّر تطبيقات جوال متعاقداً لدى شركة البلاد العربية في الخبر، على برامج أرامكو السعودية.</p>
           <ul class="tools">
             <li>Flutter</li>
-            <li>Bloc</li>
-            <li>ASP.NET</li>
-            <li>MVC</li>
-            <li>SAP ABAP</li>
+            <li>Dart</li>
+            <li>BLoC</li>
+            <li>Android</li>
+            <li>iOS</li>
           </ul>
         </div>
       </div>
@@ -365,7 +367,7 @@
           </li>
           <li>
             <span class="label en">Degree</span><span class="label ar" hidden>المؤهل</span>
-            <strong class="en">Computer Science</strong><strong class="ar" hidden>علوم الحاسب</strong>
+            <strong class="en">B.S. in Computer Science</strong><strong class="ar" hidden>بكالوريوس علوم الحاسب</strong>
             <span class="detail en">Jubail University College · 2012–2017</span>
             <span class="detail ar" hidden>كلية الجبيل الجامعية · ٢٠١٢–٢٠١٧</span>
           </li>
@@ -445,8 +447,8 @@
             <p class="meta ar" hidden>٢٠١٨ – ٢٠٢١</p>
             <p class="en">At Innosoft I built the products page, reports, search, the menu, and modals, on the interface and the backend.</p>
             <p class="ar" hidden>في إنوسوفت توليت بناء صفحة المنتجات والبلاغات والبحث والقائمة والنوافذ المنبثقة، في الواجهة والخلفية.</p>
-            <p class="fine en">The picture is today’s public App Store screen, not an internal build. The listing has moved on since 2021.</p>
-            <p class="fine ar" hidden>الصورة من صفحة التطبيق الحالية في متجر آبل، وليست من نسخة داخلية. صفحة المتجر تغيّرت بعد عام ٢٠٢١.</p>
+            <p class="fine en">Public App Store screenshot from the live listing.</p>
+            <p class="fine ar" hidden>لقطة من صفحة التطبيق المنشورة في متجر آبل.</p>
             <div class="links">
               <a href="https://apps.apple.com/us/app/tameni/id1483589368"><span class="en">App Store</span><span class="ar" hidden>متجر آبل</span></a>
               <a href="https://play.google.com/store/apps/details?id=sfda.tamini"><span class="en">Google Play</span><span class="ar" hidden>متجر Google Play</span></a>
@@ -462,15 +464,15 @@
             <h3 class="ar" hidden>تطبيق الهيئة العامة للغذاء والدواء</h3>
             <p class="meta en">Saudi Food and Drug Authority</p>
             <p class="meta ar" hidden>الهيئة العامة للغذاء والدواء</p>
-            <p class="en">Header, main menu, home, Knowledge Center, magazine, SARA, translation, HTTP requests, and sorting and filtering. That store listing is no longer up.</p>
-            <p class="ar" hidden>الترويسة، والقائمة الرئيسية، والصفحة الرئيسية، ومركز المعرفة، والمجلة، وSARA، والترجمة، وطلبات HTTP، والفرز والتصفية. نسخة المتجر الخاصة بتلك الفترة لم تعد متاحة.</p>
+            <p class="en">Header, main menu, home, Knowledge Center, magazine, SARA, translation, HTTP requests, and sorting and filtering.</p>
+            <p class="ar" hidden>الترويسة، والقائمة الرئيسية، والصفحة الرئيسية، ومركز المعرفة، والمجلة، وSARA، والترجمة، وطلبات HTTP، والفرز والتصفية.</p>
           </article>
           <article>
             <h3 class="en">Saudi Professional League</h3>
             <h3 class="ar" hidden>الدوري السعودي للمحترفين</h3>
             <p class="meta">Flutter · iOS · Android</p>
-            <p class="en">Header, menu, web views, translation, schedule, and statistics, plus some models and HTTP requests. That version is no longer the app on the stores.</p>
-            <p class="ar" hidden>الترويسة، والقائمة، وعروض الويب، والترجمة، وجدول المباريات، والإحصاءات، إلى جانب بعض النماذج وطلبات HTTP. هذه النسخة لم تعد التطبيق المعروض في المتاجر.</p>
+            <p class="en">Header, menu, web views, translation, schedule, and statistics, plus models and HTTP requests.</p>
+            <p class="ar" hidden>الترويسة، والقائمة، وعروض الويب، والترجمة، وجدول المباريات، والإحصاءات، إلى جانب النماذج وطلبات HTTP.</p>
           </article>
           <article>
             <h3 class="en">E-services rebuild</h3>
@@ -499,8 +501,8 @@
               <h3 class="ar" hidden>مطور تطبيقات الجوال</h3>
               <p class="quiet en">Al-Bilad Arabia · Contract</p>
               <p class="quiet ar" hidden>شركة البلاد العربية · متعاقد</p>
-              <p class="en">Design, code, test, release, and support for the Aramco mobile programs above. The day-to-day record is modules and screens, charts, multi-screen navigation, calendars, and changes driven by how people use the apps. Flutter with Bloc. Web work with ASP.NET and MVC.</p>
-              <p class="ar" hidden>أتولى التصميم والبرمجة والاختبار والإطلاق والدعم لبرامج أرامكو المذكورة أعلاه. ويشمل العمل اليومي، بحسب السجل، الوحدات والشاشات والمخططات البيانية والتنقل بين الشاشات والتقويمات، وتعديل التطبيقات وفق استخدام الناس لها. تطوير الجوال بـ Flutter وBloc، وتطوير الويب بـ ASP.NET وMVC.</p>
+              <p class="en">Design, build, test, release, and support Flutter mobile front ends for the Aramco programs above. Day-to-day work covers modules and screens, charts, multi-screen navigation, calendars, and product updates driven by real use. Flutter with BLoC on the mobile side; ASP.NET MVC and SAP integration on the systems behind those apps.</p>
+              <p class="ar" hidden>أتولى تصميم وبناء واختبار وإطلاق ودعم واجهات الجوال بـ Flutter لبرامج أرامكو المذكورة أعلاه. ويشمل العمل اليومي الوحدات والشاشات والمخططات البيانية والتنقل بين الشاشات والتقويمات، وتحديث المنتج وفق الاستخدام الفعلي. الجوال بـ Flutter وBLoC، والأنظمة من خلفه بـ ASP.NET MVC وتكامل SAP.</p>
             </div>
           </li>
           <li>
@@ -511,8 +513,8 @@
               <h3 class="ar" hidden>مطور تطبيقات الجوال</h3>
               <p class="quiet en">Innosoft SA · Full-time</p>
               <p class="quiet ar" hidden>إنوسوفت · بدوام كامل</p>
-              <p class="en">Web applications in ASP.NET and AngularJS, and Android and iOS apps in Flutter and Dart. MVC, Agile and Scrum, Git, Firebase, and HTTP. The shipped products were the Saudi Professional League, SFDA, and Tameni apps. September to October 2018 was a trainee on the same team, in Flutter and Dart.</p>
-              <p class="ar" hidden>تطوير تطبيقات الويب بـ ASP.NET وAngularJS، وتطبيقات Android وiOS بـ Flutter وDart، وفق MVC ومنهجية Agile وScrum، وباستخدام Git وFirebase وHTTP. المنتجات التي نُشرت: تطبيق الدوري السعودي للمحترفين، وتطبيق الهيئة العامة للغذاء والدواء، وطمني. ومن سبتمبر إلى أكتوبر ٢٠١٨ كنت متدرباً في الفريق ذاته على Flutter وDart.</p>
+              <p class="en">Built Android and iOS apps in Flutter and Dart, and web applications in ASP.NET MVC and AngularJS. Stack included Git, Firebase, REST APIs, and Agile delivery. Shipped work: Saudi Professional League, SFDA, and Tameni. September–October 2018: trainee on the same team.</p>
+              <p class="ar" hidden>بناء تطبيقات Android وiOS بـ Flutter وDart، وتطبيقات الويب بـ ASP.NET MVC وAngularJS، مع Git وFirebase وواجهات REST ومنهجية Agile. الأعمال المسلّمة: الدوري السعودي للمحترفين، والهيئة العامة للغذاء والدواء، وطمني. سبتمبر–أكتوبر ٢٠١٨: متدرب في الفريق ذاته.</p>
             </div>
           </li>
           <li>
@@ -529,6 +531,32 @@
       </div>
     </section>
 
+    <section class="block" id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="en">Skills</h2>
+          <h2 class="ar" hidden>المهارات</h2>
+        </div>
+        <div class="index three">
+          <article>
+            <h3 class="en">Mobile</h3>
+            <h3 class="ar" hidden>الجوال</h3>
+            <p>Flutter · Dart · BLoC · Android · iOS · Firebase · REST APIs · Clean Architecture</p>
+          </article>
+          <article>
+            <h3 class="en">Enterprise &amp; Backend</h3>
+            <h3 class="ar" hidden>المؤسسات والخلفية</h3>
+            <p>ASP.NET MVC · AngularJS · SAP PI/PO · SAP UI5 / Fiori · S/4HANA Integration</p>
+          </article>
+          <article>
+            <h3 class="en">Tools &amp; Practices</h3>
+            <h3 class="ar" hidden>الأدوات والممارسات</h3>
+            <p>Git · Agile</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="block" id="education">
       <div class="wrap">
         <div class="section-head">
@@ -539,24 +567,32 @@
           <li>
             <div class="when">2012 – 2017</div>
             <div>
-              <h3 class="en">Bachelor’s degree, Computer Science</h3>
+              <h3 class="en">B.S. in Computer Science</h3>
               <h3 class="ar" hidden>بكالوريوس علوم الحاسب</h3>
               <p class="quiet en">Jubail University College</p>
               <p class="quiet ar" hidden>كلية الجبيل الجامعية</p>
             </div>
           </li>
         </ol>
-        <div class="certs">
+        <p class="group-label en">Certifications</p>
+        <p class="group-label ar" hidden>الشهادات</p>
+        <div class="certs three">
           <div>
             <strong>SAP UI5 / Fiori</strong>
-            <span class="quiet en">Class Central · November 2024 · SAPUI5 and remote OData</span>
-            <span class="quiet ar" hidden>Class Central · نوفمبر ٢٠٢٤ · SAPUI5 وخدمات OData عن بُعد</span>
+            <span class="quiet en">Class Central · November 2024</span>
+            <span class="quiet ar" hidden>Class Central · نوفمبر ٢٠٢٤</span>
           </div>
           <div>
-            <strong class="en">Artificial intelligence for engineers</strong>
+            <strong class="en">Artificial Intelligence for Engineers</strong>
             <strong class="ar" hidden>الذكاء الاصطناعي للمهندسين</strong>
             <span class="quiet en">Phi Science · November 2020 · Credential 155/2020/420400</span>
             <span class="quiet ar" hidden>Phi Science · نوفمبر ٢٠٢٠ · رقم الاعتماد ١٥٥/٢٠٢٠/٤٢٠٤٠٠</span>
+          </div>
+          <div>
+            <strong class="en">Computer Interfacing: Introduction to Hardware/Software System Design</strong>
+            <strong class="ar" hidden>الربط الحاسوبي: مقدمة في تصميم أنظمة العتاد والبرمجيات</strong>
+            <span class="quiet en">Certification</span>
+            <span class="quiet ar" hidden>شهادة</span>
           </div>
         </div>
       </div>
